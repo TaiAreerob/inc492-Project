@@ -5,39 +5,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PM2HAHA.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace PM2HAHA.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private test_dbContext db;
+        public HomeController(test_dbContext ctx)
         {
-            return View();
+            db = ctx;
         }
 
-        public IActionResult About()
+        public async Task<IActionResult> Index()
         {
-            ViewData["Message"] = "Your application description page.";
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var client = new WebClient();
+           var json = client.DownloadString("http://worldtimeapi.org/api/timezone/America/Argentina/Salta");
+            Products m = JsonConvert.DeserializeObject<Products>(json);
+            var ps = await (from p in db.test_db
+                            orderby p.Id
+                            select p).ToListAsync();
+            return View(m);
         }
     }
 }
