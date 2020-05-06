@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\จารเบ้น\\PM2HAHA\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj": {}
+    "C:\\Users\\punya\\Desktop\\WORK\\inc492-Project\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj": {}
   },
   "projects": {
-    "D:\\จารเบ้น\\PM2HAHA\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj": {
+    "C:\\Users\\punya\\Desktop\\WORK\\inc492-Project\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\จารเบ้น\\PM2HAHA\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj",
+        "projectUniqueName": "C:\\Users\\punya\\Desktop\\WORK\\inc492-Project\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj",
         "projectName": "PM2HAHA",
-        "projectPath": "D:\\จารเบ้น\\PM2HAHA\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj",
-        "packagesPath": "C:\\Users\\ppunn\\.nuget\\packages\\",
-        "outputPath": "D:\\จารเบ้น\\PM2HAHA\\PM2HAHA\\PM2HAHA\\obj\\",
+        "projectPath": "C:\\Users\\punya\\Desktop\\WORK\\inc492-Project\\PM2HAHA\\PM2HAHA\\PM2HAHA.csproj",
+        "packagesPath": "C:\\Users\\punya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\punya\\Desktop\\WORK\\inc492-Project\\PM2HAHA\\PM2HAHA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ppunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\punya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +38,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "Json": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Json.Serialization": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -49,11 +57,29 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.14, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
@@ -66,7 +92,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
