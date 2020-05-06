@@ -25,9 +25,9 @@ namespace PM2HAHA.Controllers
             var client = new WebClient();
            var json = client.DownloadString("http://worldtimeapi.org/api/timezone/America/Argentina/Salta");
             Products m = JsonConvert.DeserializeObject<Products>(json);
-            var ps = await (from p in db.test_db
-                            orderby p.Id
-                            select p).ToListAsync();
+           // var ps = await (from p in db.test_db
+           //                 orderby p.Id
+           //                 select p).ToListAsync();
             return View(m);
         }
     }
