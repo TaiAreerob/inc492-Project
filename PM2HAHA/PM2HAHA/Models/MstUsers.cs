@@ -14,39 +14,30 @@ namespace PM2HAHA.Models
         public Guid Id { get; set; }
 
         [Column("usernamr")]
-
         public string Username { get; set; }
 
         [Column("password")]
-
-        public string password { get; set; }
+        public string Password { get; set; }
 
         [Column("name")]
-
         public string Name { get; set; }
 
         [Column("lastname")]
-
         public string Lastname { get; set; }
 
         [Column("phone")]
-
-        public string phone { get; set; }
+        public string Phone { get; set; }
 
         [Column("email")]
-
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [Column("stutus")]
-
-        public int stutus { get; set; }
+        public int Stutus { get; set; }
 
         [Column("CreateAt")]
-
         public DateTime CreateAt { get; set; }
 
         [Column("UploadAt")]
-
         public DateTime UploadAt { get; set; }
 
 

@@ -15,31 +15,25 @@ namespace PM2HAHA.Models
             [Key, Column("id")]
             public Guid Id { get; set; }
 
-            [Column("Time")]
-
+            [Column("time")]
             public DateTime Time { get; set; }
 
             [Column("pm2")]
-
-            public int pm2 { get; set; }
+            public int Pm2 { get; set; }
 
             [Column("pm10")]
-
-            public int pm10 { get; set; }
+            public int Pm10 { get; set; }
 
             [Column("humidity")]
+            public Decimal Humidity { get; set; }
 
-            public Decimal humidity { get; set; }
             [Column("temp")]
-
-            public Decimal temp { get; set; }
+            public Decimal Temp { get; set; }
 
             [Column("CreateAt")]
-
             public DateTime CreateAt { get; set; }
 
             [Column("UploadAt")]
-
             public DateTime UploadAt { get; set; }
 
 
