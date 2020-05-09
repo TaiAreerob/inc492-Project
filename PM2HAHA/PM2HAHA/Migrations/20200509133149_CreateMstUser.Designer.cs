@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PM2HAHA.Models;
 
 namespace PM2HAHA.Migrations
 {
     [DbContext(typeof(test_dbContext))]
-    partial class test_dbContextModelSnapshot : ModelSnapshot
+    [Migration("20200509133149_CreateMstUser")]
+    partial class CreateMstUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

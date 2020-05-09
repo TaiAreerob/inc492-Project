@@ -12,7 +12,7 @@ namespace PM2HAHA.Models
             : base(options)
         {
         }
-        public virtual DbSet<test_db> test_db { get; set; }
+       // public virtual DbSet<test_db> test_db { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
