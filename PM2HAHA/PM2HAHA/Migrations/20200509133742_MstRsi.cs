@@ -12,13 +12,10 @@ namespace PM2HAHA.Migrations
              columns: table => new
              {
                  id = table.Column<Guid>(nullable: false),
-                 username = table.Column<string>(nullable: true, maxLength: 255),
-                 password = table.Column<string>(nullable: true, maxLength: 255),
-                 name = table.Column<string>(nullable: true, maxLength: 255),
-                 lastname = table.Column<string>(nullable: true, maxLength: 255),
-                 phone = table.Column<string>(nullable: true, maxLength: 20),
-                 email = table.Column<string>(nullable: true, maxLength: 100),
-                 stutus = table.Column<int>(nullable: true),
+                 period = table.Column<int>(nullable: true, maxLength: 255),
+                 highlevel = table.Column<int>(nullable: true, maxLength: 255),
+                 lowlevel = table.Column<int>(nullable: true, maxLength: 255),
+                 usercreate = table.Column<Guid>(nullable: true, maxLength: 255),
                  CreateAt = table.Column<DateTime>(nullable: false),
                  UploadAt = table.Column<DateTime>(nullable: false)
              },
