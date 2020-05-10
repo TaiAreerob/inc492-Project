@@ -21,9 +21,9 @@ namespace PM2HAHA.Controllers
 
         public async Task<IActionResult> Index()
         {
-
+            String cityname = "Bangkok";
             var client = new WebClient();
-           var json = client.DownloadString("http://worldtimeapi.org/api/timezone/America/Argentina/Salta");
+              var json = client.DownloadString($"https://api.waqi.info/feed/{cityname}/?token=c5a40e7f8af3b6fac5f3ca3828fda8b05ec1e60a");
             Products m = JsonConvert.DeserializeObject<Products>(json);
            // var ps = await (from p in db.test_db
            //                 orderby p.Id
