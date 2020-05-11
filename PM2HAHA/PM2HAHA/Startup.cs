@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PM2HAHA.Models;
+using PM2HAHA.TimerService;
 
 namespace PM2HAHA
 {
@@ -37,6 +38,7 @@ namespace PM2HAHA
             var strConn = @"Server = .\SQLExpress;Database = test_db;Trusted_Connection=true";
             services.AddDbContext<test_dbContext>(options => options.UseSqlServer(strConn));
             services.AddMvc();
+            services.AddHostedService<ObserverService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -25,6 +25,8 @@ namespace PM2HAHA.Models
     public class City
     {
         public string name { get; set; }
+
+      
     }
     public class Iaqi
     {
