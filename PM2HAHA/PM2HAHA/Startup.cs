@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PM2HAHA.Models;
 
 namespace PM2HAHA
 {
@@ -31,8 +34,9 @@ namespace PM2HAHA
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var strConn = @"Server = .\SQLExpress;Database = test_db;Trusted_Connection=true";
+            services.AddDbContext<test_dbContext>(options => options.UseSqlServer(strConn));
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,16 +51,16 @@ namespace PM2HAHA
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+           
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("blog", "blog/{*article}",
+                            defaults: new { controller = "Blog", action = "Article" });
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
