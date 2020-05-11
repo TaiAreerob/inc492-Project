@@ -11,6 +11,7 @@ namespace PM2HAHA.Models
         [Table("MstDataRaw")]
         public partial class MstDataRaw
     {
+        
             [Key, Column("id")]
             public Guid Id { get; set; }
 
