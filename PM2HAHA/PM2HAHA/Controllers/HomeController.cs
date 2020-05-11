@@ -8,17 +8,20 @@ using PM2HAHA.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using Newtonsoft.Json;
-
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Linq.Expressions;
 
 namespace PM2HAHA.Controllers
 {
     [Route("Home")]
     public class HomeController : Controller
     {
-        private test_dbContext db;
-        public HomeController(test_dbContext ctx)
+       
+        [HttpGet]
+        public ActionResult<string> Index(int id)
         {
-            db = ctx;
+          
+            return View(1);
         }
 
 
@@ -27,7 +30,37 @@ namespace PM2HAHA.Controllers
         [Route("/")]     // Doesn't combine, defines the route template ""
         public IActionResult Index()
         {
-           
+            try
+            {
+                City Datasent = new City
+                {
+                   name = "tesssentobj"
+                };
+
+                APICall datamap = new APICall
+                {
+                    status = Datasent.name
+                   
+                };
+
+                using (test_dbContext ctx = new test_dbContext())
+                {
+                    ctx.Database.BeginTransaction();
+                    MstDataRaw newdata = new MstDataRaw()
+                    {
+                        City = datamap.status
+                    };
+                    ctx.MstDataRaws.Add(newdata);
+                    ctx.SaveChanges();
+                    ctx.Database.CommitTransaction();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            
             return View();
         }
 
