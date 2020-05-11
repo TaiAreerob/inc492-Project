@@ -6,8 +6,10 @@ namespace PM2HAHA.Models
 {
     public partial class test_dbContext : DbContext
     {
-        
-       
+        public test_dbContext()
+        {
+        }
+
         public test_dbContext(DbContextOptions<test_dbContext> options)
             : base(options)
         {
