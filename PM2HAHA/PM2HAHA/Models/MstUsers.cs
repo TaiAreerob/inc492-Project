@@ -40,7 +40,7 @@ namespace PM2HAHA.Models
         [Column("UploadAt")]
         public DateTime UploadAt { get; set; }
 
-
+        public string ConfirmPassword{ get; set; }
 
     }
 }
