@@ -51,16 +51,16 @@ namespace PM2HAHA
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+           
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("blog", "blog/{*article}",
+                            defaults: new { controller = "Blog", action = "Article" });
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
