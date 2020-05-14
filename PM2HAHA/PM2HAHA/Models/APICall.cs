@@ -18,9 +18,6 @@ namespace PM2HAHA.Models
         public int aqi { get; set; }
         public City city { get; set; }
         public Iaqi iaqi { get; set; }
-      
-
-
     }
     public class City
     {
@@ -49,7 +46,7 @@ namespace PM2HAHA.Models
     }
     public class H
     {
-        public decimal V { get; set; }
+        public int V { get; set; }
     }
     public class No2
     {
@@ -65,11 +62,11 @@ namespace PM2HAHA.Models
     }
     public class Pm10
     {
-        public decimal V { get; set; }
+        public int V { get; set; }
     }
     public class Pm25
     {
-        public decimal V { get; set; }
+        public int V { get; set; }
     }
     public class R
     {
