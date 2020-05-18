@@ -34,7 +34,6 @@ namespace PM2HAHA.Models
         public P p { get; set; }
         public Pm10 pm10 { get; set; }
         public Pm25 pm25 { get; set; }
-        public R r { get; set; }
         public So2 so2 { get; set; }
         public T t { get; set; }
         public W w { get; set; }
@@ -46,7 +45,7 @@ namespace PM2HAHA.Models
     }
     public class H
     {
-        public int V { get; set; }
+        public decimal V { get; set; }
     }
     public class No2
     {
@@ -68,10 +67,7 @@ namespace PM2HAHA.Models
     {
         public int V { get; set; }
     }
-    public class R
-    {
-        public decimal V { get; set; }
-    }
+
     public class So2
     {
         public decimal V { get; set; }
