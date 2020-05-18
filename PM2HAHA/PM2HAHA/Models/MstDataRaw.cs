@@ -35,7 +35,7 @@ namespace PM2HAHA.Models
              public Decimal Co { get; set; }
 
             [Column("h")]
-            public int H { get; set; }
+            public Decimal H { get; set; }
 
             [Column("no2")]
             public Decimal No2 { get; set; }

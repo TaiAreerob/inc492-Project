@@ -35,18 +35,18 @@ namespace PM2HAHA.Controllers
         [Route("/")]     // Doesn't combine, defines the route template ""
 
       
-        public async Task<IActionResult> Index()
-        {
+      //  public async Task<IActionResult> Index()
+      //  {
             
             
             
 
-            return View();
+        //    return View();
            
 
            
 
-        }
+        //}
         public IActionResult about()
         {
 
