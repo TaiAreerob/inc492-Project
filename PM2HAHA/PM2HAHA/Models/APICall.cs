@@ -27,7 +27,7 @@ namespace PM2HAHA.Models
     }
     public class Iaqi
     {
-        public Co co { get; set; }
+        public Co  co { get; set; }
         public H h { get; set; }
         public No2 no2 { get; set; }
         public O3 o3 { get; set; }
