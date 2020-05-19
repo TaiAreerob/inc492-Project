@@ -1,0 +1,54 @@
+﻿@model PM2HAHA.Models.MstRsi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MstRsi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.period)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.period)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.higilevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.higilevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.lowlevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.lowlevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.usercreate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.usercreate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateAt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UploadAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UploadAt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

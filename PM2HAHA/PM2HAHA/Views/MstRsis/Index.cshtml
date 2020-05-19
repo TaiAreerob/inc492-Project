@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PM2HAHA.Models.MstRsi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.period)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.higilevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lowlevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usercreate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.period)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.higilevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lowlevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usercreate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadAt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
