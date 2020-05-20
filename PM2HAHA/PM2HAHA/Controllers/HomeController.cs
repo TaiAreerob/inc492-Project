@@ -11,58 +11,50 @@ using Newtonsoft.Json;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Linq.Expressions;
 
+
 namespace PM2HAHA.Controllers
 {
+    
     [Route("Home")]
     public class HomeController : Controller
     {
-       
+        int Dataaqi;
+        int Dataidx;
+        string Dataname;
+
         [HttpGet]
         public ActionResult<string> Index(int id)
-        {
+        { 
           
             return View(1);
         }
-
+  
 
         [Route("")]      // Combines to define the route template "Home"
         [Route("Index")] // Combines to define the route template "Home/Index"
         [Route("/")]     // Doesn't combine, defines the route template ""
-        public IActionResult Index()
+
+      
+      //  public async Task<IActionResult> Index()
+      //  {
+            
+            
+            
+
+        //    return View();
+           
+
+           
+
+        //}
+        public IActionResult about()
         {
-            try
-            {
-                City Datasent = new City
-                {
-                   name = "tesssentobj"
-                };
-
-                APICall datamap = new APICall
-                {
-                    status = Datasent.name
-                   
-                };
-
-                using (test_dbContext ctx = new test_dbContext())
-                {
-                    ctx.Database.BeginTransaction();
-                    MstDataRaw newdata = new MstDataRaw()
-                    {
-                        City = datamap.status
-                    };
-                    ctx.MstDataRaws.Add(newdata);
-                    ctx.SaveChanges();
-                    ctx.Database.CommitTransaction();
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
 
             
             return View();
         }
+
+
 
         [HttpPost]
         public ActionResult Create(MstUsers std)

@@ -35,7 +35,7 @@ namespace PM2HAHA.TimerService
             {
 
                 testcount++;
-                ApiController test = new ApiController(testcount);
+                ApiController test = new ApiController();
             }
             catch (Exception ex)
             {

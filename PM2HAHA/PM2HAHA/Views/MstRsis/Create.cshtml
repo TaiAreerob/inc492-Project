@@ -1,0 +1,55 @@
+﻿@model PM2HAHA.Models.MstRsi
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>MstRsi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="period" class="control-label"></label>
+                <input asp-for="period" class="form-control" />
+                <span asp-validation-for="period" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="higilevel" class="control-label"></label>
+                <input asp-for="higilevel" class="form-control" />
+                <span asp-validation-for="higilevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lowlevel" class="control-label"></label>
+                <input asp-for="lowlevel" class="form-control" />
+                <span asp-validation-for="lowlevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="usercreate" class="control-label"></label>
+                <input asp-for="usercreate" class="form-control" />
+                <span asp-validation-for="usercreate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateAt" class="control-label"></label>
+                <input asp-for="CreateAt" class="form-control" />
+                <span asp-validation-for="CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UploadAt" class="control-label"></label>
+                <input asp-for="UploadAt" class="form-control" />
+                <span asp-validation-for="UploadAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
